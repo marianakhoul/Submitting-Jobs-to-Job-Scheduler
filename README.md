@@ -1,1 +1,1 @@
-# Submitting-Jobs-to-Job-Scheduler
+# Submitting Jobs to Job Scheduler

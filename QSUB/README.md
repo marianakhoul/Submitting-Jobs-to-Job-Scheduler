@@ -1,5 +1,12 @@
 # QSUB Job Scheduler Commands
 
+## Breakdown of the README.md file
+1. [QSUB Jop Options](#Jop-Options)
+2. [How-to run qsub in terminal](#Running-qsub-in-Terminal)
+3. [Creating qsub Scripts](#Creating-qsub-Scripts)
+4. [Check Job Status](#Check-Job-Status)
+5. [Scripts for Automation in this Repository](#Scripts-for-Automation-in-this-Repository)
+
 ## Jop Options
  * -V: passes all environmental variables to the job
  * -N <jobname>: name of the job. Will see it when using qstat

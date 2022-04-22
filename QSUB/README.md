@@ -13,6 +13,26 @@
  * -m ea: Will send an email when job finishes/aborts
  * -M <email_address>: The email address to send email to
  
+## Running qsub in Terminal
+To run qsub in the terminal:
+```
+qsub -N Example -l h_vmem=40G,h_rt=100:00:00 -pe pvm 32 -o ~/Example.out file.qsub
+```
+
+## Creating qsub Scripts
+Add the options for qsub in your scripts after the bash shebang using the #$ opperator.
+
+Example:
+```
+#!/bin/bash
+ 
+#$ -pe pvm 32
+#$ -l h_vmem=6G
+```
+Since the options are inside the script, simply run qsub as follows:
+```
+qsub file.qsub
+```
 
 ## Scripts for Automation in this Repository
 **cram2bam.sh** creates the .qsub files and submits them using the qsub command.

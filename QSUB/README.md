@@ -3,7 +3,8 @@
 ## Jop Options
  * -q <queue>
  * -V: passes all environmental variables to the job
- *-N <jobname>: name of the job. Will see it when using _qstat_
+ * -N <jobname>: name of the job. Will see it when using qstat
+ * 
  
 
 ## Scripts for Automation in this Repository

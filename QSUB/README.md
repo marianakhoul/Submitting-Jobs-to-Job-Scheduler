@@ -32,6 +32,10 @@ Since the options are inside the script, simply run qsub as follows:
 ```
 qsub file.qsub
 ```
-
+## Check Job Status
+To check the status of your job
+```
+qstat
+```
 ## Scripts for Automation in this Repository
 **cram2bam.sh** creates the .qsub files and submits them using the qsub command.

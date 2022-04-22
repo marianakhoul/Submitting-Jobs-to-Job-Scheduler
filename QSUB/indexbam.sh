@@ -14,7 +14,7 @@ for i in `$HOME/bam_file_paths.txt`;
 	echo '#$ -S /bin/bash' >> $HOME/indexbam_jobs/${base_name}.qsub
 	echo '#$ -pe pvm 32'"\n\n" >> $HOME/indexbam_jobs/${base_name}.qsub
 	echo 'module load /modules/linux-ubuntu16.04-x86_64/samtools-1.9-gcc-5.4.0-jjq5nua'"\n" >> $HOME/indexbam_jobs/${base_name}.qsub
-	echo "samtools index ${i}" >> $HOME/indexbam_jobs/${base_name}.qsub
+	echo "samtools index ${i} > ${i}.bai" >> $HOME/indexbam_jobs/${base_name}.qsub
 	done
 
 for i in `ls $HOME/indexbam_jobs`;

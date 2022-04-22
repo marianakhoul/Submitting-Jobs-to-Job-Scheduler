@@ -1,7 +1,6 @@
 # QSUB Job Scheduler Commands
 
 ## Jop Options
- * -q <queue>
  * -V: passes all environmental variables to the job
  * -N <jobname>: name of the job. Will see it when using qstat
  * -l h_vmem=size: Maximum memory required. This is per job

@@ -1,10 +1,12 @@
 #!/bin/bash
 
-#Find the cram file absolute paths
+#Find the cram file absolute paths and removes the .cram extension. Outputs path into file cram_file_paths.txt.
 find "$PWD" -name "*.cram" | sed s/.cram//g > ~/cram_file_paths.txt
 
+#creates the cram2bam_jobs if it doesn't exist (-p option)
 mkdir -p $HOME/cram2bam_jobs
 
+#Creates the .qsub scripts for each file in cram_file_paths.txt and saves them to $HOME/cram2bam_jobs
 for i in `cat ~/cram_file_paths.txt`;
 	do
 	base_name=$(basename ${i})
@@ -17,6 +19,7 @@ for i in `cat ~/cram_file_paths.txt`;
 	echo "samtools view -T /path/to/reference/fasta/Homo_sapiens_assembly38.fasta -b -o ${i}.bam ${i}.cram" >> $HOME/cram2bam_jobs/${base_name}.qsub
 	done
 
+# Submits .qsub scripts found inside $HOME/cram2bam_jobs
 for i in `ls $HOME/cram2bam_jobs`;
 	do
 	qsub $HOME/cram2bam_jobs/$i

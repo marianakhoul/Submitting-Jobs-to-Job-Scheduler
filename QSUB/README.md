@@ -46,13 +46,15 @@ To check the status of your job
 qstat
 ```
 ## Delete Submitted Jobs
+Get the job-ID by using qstat.
+
 To delete a job
 ```
-qdel <job-ID> 
+qdel 1869793 # deletes job 1869793
 ```
 To delete a consecutive series of jobs, first make sure that all the jobs from Number X to Number Y are actually yours. You don't want to delete someone elses running jobs.
 ```
-qdel {<first_job-ID>..<last_job-ID>} 
+qdel {1869793..1869796}  # deletes jobs from 1869793 to 1869796 included
 ```  
  
 ## Scripts for Automation in this Repository

@@ -6,6 +6,7 @@
 3. [Creating qsub Scripts](#Creating-qsub-Scripts)
 4. [Check Job Status](#Check-Job-Status)
 5. [Scripts for Automation in this Repository](#Scripts-for-Automation-in-this-Repository)
+6. [Delete Submitted Jobs](#Delete-Submitted-Jobs)
 
 ## Jop Options
  * -V: passes all environmental variables to the job
@@ -44,5 +45,15 @@ To check the status of your job
 ```
 qstat
 ```
+## Delete Submitted Jobs
+To delete a job
+```
+qdel <job-ID> 
+```
+To delete a consecutive series of jobs, first make sure that all the jobs from Number X to Number Y are actually yours. You don't want to delete someone elses running jobs.
+```
+qdel {<first_job-ID>..<last_job-ID>} 
+```  
+ 
 ## Scripts for Automation in this Repository
 **cram2bam.sh** creates the .qsub files and submits them using the qsub command.

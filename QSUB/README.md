@@ -56,4 +56,5 @@ qdel {<first_job-ID>..<last_job-ID>}
 ```  
  
 ## Scripts for Automation in this Repository
-**cram2bam.sh** creates the .qsub files and submits them using the qsub command.
+1. **cram2bam.sh** creates the .qsub files and submits them using the qsub command. Converts files from.cram to .bam 
+2. **indexbam.sh** creates the .qsub files and submits them using the qsub command. Indexes .bam files and outputs to .bam.bai

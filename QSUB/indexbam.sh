@@ -6,7 +6,7 @@ find "$PWD" -name "*.bam" > $HOME/bam_file_paths.txt
 
 mkdir -p $HOME/indexbam_jobs
 
-for i in `$HOME/bam_file_paths.txt`;
+for i in `cat $HOME/bam_file_paths.txt`;
 	do
 	base_name=$(basename ${i})
 	echo '#!/bin/bash'"\n" > $HOME/indexbam_jobs/${base_name}.qsub
